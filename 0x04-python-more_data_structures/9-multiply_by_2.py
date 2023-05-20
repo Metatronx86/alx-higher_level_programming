@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-
 def multiply_by_2(a_dictionary):
-    """
-    Return a new dictionary with all values multiplied by 2.
+    """muliply the value in a dictionary
 
     Args:
-        a_dictionary: The dictionary to multiply the values from.
+        a_dictionary: a dictionary
 
     Returns:
-        A new dictionary with all values multiplied by 2.
+       the new dictionary with modified value
     """
-    new_dictionary = {}
-    for key, value in a_dictionary.items():
-        new_dictionary[key] = value * 2
-    return new_dictionary
+    new_dict = {}
+    for i in a_dictionary:
+        new_dict[i] = a_dictionary[i] * 2
+    return (new_dict)
 
