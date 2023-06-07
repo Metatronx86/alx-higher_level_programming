@@ -1,0 +1,60 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``express_my_name``
+-------------------
+
+Importing the function from the module:
+	>>> express_my_name = __import__("3-say_my_name").express_my_name
+
+Checking for module docstring:
+	 >>> m = __import__("3-say_my_name").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for function docstring:
+	 >>> f = __import__("3-say_my_name").express_my_name.__doc__
+         >>> len(f) > 1
+         True
+
+Checking for passing None as first name:
+	 >>> express_my_name(None, "Hello")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for passing None as last name:
+	 >>> express_my_name("Hello", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for incorrect type as first name:
+         >>> express_my_name(1, "Hello")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for incorrect type as last name:
+         >>> express_my_name("Hello", [4])
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking for regular usage:
+	 >>> express_my_name("Hello", "World")
+	 I am known as Hello World
+	 >>> express_my_name("You know nothing", "John Snow")
+	 I am known as You know nothing John Snow
+
+Checking for 1 argument:
+	 >>> express_my_name("Hello")
+	 I am known as Hello 
+
+Checking for more than 2 arguments:
+	 >>> express_my_name("Hello", "World", "hi")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: express_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Please communicate using the English language.

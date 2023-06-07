@@ -1,0 +1,105 @@
+#!/usr/bin/python3
+
+"""
+How to Use 0-add_integer.py
+===========================
+
+This module defines an integer addition function called `add_integer(a, b=98)`.
+"""
+
+def add_integer(a, b=98):
+    """
+    Calculate the integer sum of a and b.
+
+    Floating-point arguments are typecasted to integers before the summation is performed.
+
+    Raises:
+        TypeError: If either of a or b is a non-integer and non-floating-point value.
+    """
+    if ((not isinstance(a, int) and not isinstance(a, float))):
+        raise TypeError("a must be an integer")
+    if ((not isinstance(b, int) and not isinstance(b, float))):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
+
+
+if __name__ == '__main__':
+    """
+    Usage
+    =====
+
+    `add_integer(...)` returns the sum of its two arguments. For numbers,
+    that value is equivalent to using the `+` operator.
+    """
+
+    # Regular addition
+    result = add_integer(2, 3)
+    print(result)  # Output: 5
+
+    # Positive with negative
+    result = add_integer(2, -3)
+    print(result)  # Output: -1
+
+    # Floating-point values
+    result = add_integer(2.0, 3.0)
+    print(result)  # Output: 5
+
+    # Floats are converted to ints
+    result = add_integer(2.9, 0.2)
+    print(result)  # Output: 2
+
+    # Combination of floats and non-floats
+    result = add_integer(2.3, -3)
+    print(result)  # Output: -1
+
+    # Optional second argument
+    result = add_integer(2)
+    print(result)  # Output: 100
+
+    # Non-Numbers
+    try:
+        add_integer("hello", 3)
+    except TypeError as e:
+        print(e)  # Output: a must be an integer
+
+    try:
+        add_integer(2, "hello")
+    except TypeError as e:
+        print(e)  # Output: b must be an integer
+
+    try:
+        add_integer(None)
+    except TypeError as e:
+        print(e)  # Output: a must be an integer
+
+    try:
+        add_integer(2.3, None)
+    except TypeError as e:
+        print(e)  # Output: b must be an integer
+
+    try:
+        add_integer("hello", "there")
+    except TypeError as e:
+        print(e)  # Output: a must be an integer
+
+    # Infinity and NaN
+    try:
+        add_integer(float('inf'))
+    except OverflowError as e:
+        print(e)  # Output: cannot convert float infinity to integer
+
+    try:
+        add_integer(2, float('inf'))
+    except OverflowError as e:
+        print(e)  # Output: cannot convert float infinity to integer
+
+    try:
+        add_integer(float('nan'))
+    except ValueError as e:
+        print(e)  # Output: cannot convert float NaN to integer
+
+    try:
+        add_integer(2, float('nan'))
+    except ValueError as e:
+        print(e)  # Output: cannot convert float NaN to integer
+
