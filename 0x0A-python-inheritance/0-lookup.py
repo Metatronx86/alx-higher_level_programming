@@ -1,22 +1,10 @@
 #!/usr/bin/python3
+''' function that returns the list
+'''
+
 
 def lookup(obj):
-  """Returns a list of the available attributes and methods of an object.
-
-  Args:
-    obj: The object to lookup.
-
-  Returns:
-    A list of strings, where each string is the name of an attribute or method of the object.
-  """
-
-  attributes = []
-  methods = []
-  for attr in dir(obj):
-    if not callable(getattr(obj, attr)):
-      attributes.append(attr)
-    else:
-      methods.append(attr)
-
-  return attributes + methods
-
+    ''' function: lookup()
+    Returns a list object
+    '''
+    return dir(obj)
