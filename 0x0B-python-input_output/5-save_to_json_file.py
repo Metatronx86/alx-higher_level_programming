@@ -12,5 +12,5 @@ Args:
     my_obj (any): The Python object to be serialized and written to the file.
     filename (str): The name of the file to write the JSON representation to.
 '''
-with open(filename, 'w') as f:
-    f.write(json.dumps(my_obj))
+    with open(filename, 'w') as f:
+        f.write(json.dumps(my_obj))
