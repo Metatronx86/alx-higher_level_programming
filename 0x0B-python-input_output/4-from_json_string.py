@@ -14,4 +14,4 @@ Args:
 Returns:
     any: The Python object represented by the JSON string.
 '''
-return json.loads(my_str)
+return (json.loads(my_str))
