@@ -14,4 +14,4 @@ Args:
 Returns:
     str: The JSON representation of the object.
 '''
-return json.dumps(my_obj)
+return (json.dumps(my_obj))
