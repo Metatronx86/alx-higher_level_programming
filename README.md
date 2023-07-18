@@ -1,6 +1,4 @@
-# alx-higher_level_programmingSure, here is the README with "Holberton School" replaced with "ALX Software Engineering":
 
-**alx-higher_level_programming**
 
 This directory contains the work I completed for the ALX Software Engineering's Higher Level Programming course. The course covers the following topics:
 
