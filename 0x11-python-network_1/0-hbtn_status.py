@@ -1,32 +1,21 @@
 #!/usr/bin/python3
+"""A script that fetches https://intranet.hbtn.io/status and displays information about the response."""
+
 import urllib.request
 
-def fetch_url_content(url):
-    """
-    Fetches the content of a URL and returns it as a string.
-
-    Args:
-        url (str): The URL to fetch the content from.
-
-    Returns:
-        str: The content of the URL as a string.
-    """
+def fetch_and_display_status(url):
     try:
         with urllib.request.urlopen(url) as response:
-            html_content = response.read().decode('utf-8')
-            return html_content
+            content = response.read().decode('utf-8')
 
-    except urllib.error.HTTPError as e:
-        return f"Error: {e.code} {e.reason}"
+            print("Body response:")
+            print("\t- type:", type(content))  # Display the type of content (str)
+            print("\t- content:", content)      # Display the content (str)
+
     except urllib.error.URLError as e:
-        return f"Error: {e.reason}"
+        print(f"Error: {e.reason}")
 
-if __name__ == "__main__":
-    url_to_fetch = 'https://alx-intranet.hbtn.io/status'
-    content = fetch_url_content(url_to_fetch)
-
-    if content.startswith("Error"):
-        print(content)
-    else:
-        print(content)
+if __name__ == '__main__':
+    url_to_fetch = 'https://intranet.hbtn.io/status'
+    fetch_and_display_status(url_to_fetch)
 
