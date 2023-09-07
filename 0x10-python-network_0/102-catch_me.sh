@@ -1,8 +1,3 @@
 #!/bin/bash
-
-# Set the URL
-url="http://0.0.0.0:5000/catch_me"
-
-# Make a POST request with a custom request header
-curl -s -X POST "$url" -H "X-HolbertonSchool-User-Id: 98"
-
+# makes a request to 0.0.0.0:5000/catch_me server that makes it respond "You got me!"
+curl -sL -X PUT 0.0.0.0:5000/catch_me -H "Origin: HolbertonSchool" -d "user_id=100"
