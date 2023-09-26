@@ -39,9 +39,9 @@ Before you can use this script, you need to have Node.js installed on your syste
 
 ## Installation
 
-1. Clone this repository or download the `read_file.js` script.
+A. Clone this repository or download the `read_file.js` script.
 
-2. Make the script executable:
+B. Make the script executable:
 
 ## Usage
 
@@ -54,4 +54,131 @@ Replace `<file_path>` with the path to the file you want to read.
 
 ```bash
 ./read_file.js /path/to/your/file.txt
+
+
+1. Write me
+mandatory
+Write a script that writes a string to a file.
+
+The first argument is the file path
+The second argument is the string to write
+The content of the file must be written in utf-8
+If an error occurred during while writing, print the error object
+
+
+# File Writer Script
+
+This is a simple Node.js script that writes a string to a file. It allows you to specify the file path and the content to be written to the file via command-line arguments.
+
+## Prerequisites
+
+Before using this script, ensure you have Node.js installed on your system. You can download and install Node.js from the official website: [Node.js](https://nodejs.org/)
+
+## Usage
+
+To use the script, follow these steps:
+
+A. Save the script to a file (e.g., `write_file.js`).
+
+B. Make the script executable by running the following command in your terminal:
+   ```bash
+   chmod +x write_file.js
+
+
+
+3. Star wars movie title
+mandatory
+Write a script that prints the title of a Star Wars movie where the episode number matches a given integer.
+
+The first argument is the movie ID
+You must use the Star wars API with the endpoint https://swapi-api.alx-tools.com/api/films/:id
+You must use the module request
+# Star Wars Movie Title Finder
+
+This Node.js script allows you to find and print the title of a Star Wars movie based on the episode number you provide. It uses the 'request' module to make an HTTP request to the Star Wars API ('swapi-api.hbtn.io') to retrieve movie information.
+
+## Prerequisites
+
+Before using this script, ensure you have Node.js installed on your system. You can download and install Node.js from the official website: [Node.js](https://nodejs.org/)
+
+## Usage
+
+To use the script, follow these steps:
+
+A. Save the script to a file (e.g., `star_wars_movie.js`).
+
+B. Make the script executable by running the following command in your terminal:
+   ```bash
+   chmod +x star_wars_movie.js
+
+
+
+4. Star wars Wedge Antilles
+mandatory
+Write a script that prints the number of movies where the character “Wedge Antilles” is present.
+
+The first argument is the API URL of the Star wars API: https://swapi-api.alx-tools.com/api/films/
+Wedge Antilles is character ID 18 - your script must use this ID for filtering the result of the API
+You must use the module request
+
+
+# Star Wars Movie Character Counter
+
+This Node.js script counts the number of movies featuring the character Wedge Antilles in the Star Wars universe using data from the Star Wars API.
+
+## Usage
+
+A. Run the script with a URL to the Star Wars API as a command-line argument.
+
+B. The script will fetch the data and display the count of movies with Wedge Antilles.
+
+## Example
+
+```bash
+./script.js https://swapi-api.hbtn.io/api/people/
+
+5. Write a script that gets the contents of a webpage and stores it in a file.
+
+The first argument is the URL to request
+The second argument the file path to store the body response
+The file must be UTF-8 encoded
+You must use the module request
+
+
+# Webpage Content Downloader
+
+## Description
+
+This Node.js script allows you to download the contents of a webpage and save it to a file. It's a convenient tool for archiving web content for offline use or analysis.
+
+## Usage
+
+A. Make sure you have Node.js installed on your system.
+
+B. Run the script with the following command:
+
+   ```bash
+   ./webpage-downloader.js [URL] [OutputFile]
+6. How many completed?
+mandatory
+Write a script that computes the number of tasks completed by user id.
+
+The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
+Only print users with completed task
+You must use the module request
+
+# Task Completion Counter
+
+## Description
+
+This Node.js script computes and displays the number of tasks completed by each user ID from a provided JSON data source. It's a handy tool for analyzing task completion statistics.
+
+## Usage
+
+A. Ensure you have Node.js installed on your system.
+
+B. Run the script with the following command:
+
+   ```bash
+   ./task-completion-counter.js [JSONDataURL]
 
